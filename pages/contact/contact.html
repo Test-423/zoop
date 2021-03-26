@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contuct US</title>
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header flex">
+        <div class="header__logo">
+          <a href="#" class="header__link">
+            <img src="../../assets/logos/logo_black.svg" alt="Zoo Logo">
+          </a>
+        </div>
+        <div class="header__nav flex">
+          <a href="#" class="navtext">About</a>
+          <a href="#" class="navtext">map</a>
+          <a href="#" class="navtext">zoos</a>
+          <a href="#" class="navtext">contact us</a>
+          <a href="#" class="navtext">design</a>
+        </div>
+        <div class="header__socials flex">
+          <a href="#" class="header__socials-youtube"></a>
+          <a href="#" class="header__socials-instagram"></a>
+          <a href="#" class="header__socials-facebook"></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="contuct-us">
+      <div class="contuct-us__bgimage"></div>
+      <div class="contuct-us__content flex main-content">
+        <div class="maincontent__text">
+          <div class="maincontent__suptext h2">
+            Get in touch
+          </div>
+          <div class="maincontent__subtext body">
+            Whether you have a question, or would like to say hello, we're happy to hear from you. Please use the form
+            to send us a message and we'll get back to you as soon as we can. Whether you have a question, or would like
+            to say hello, we're happy to hear from you. Please use the form to send us a message and we'll get back to
+            you as soon as we can.
+          </div>
+        </div>
+        <div class="maincontent__form">
+          <form action="#fr" class="form" onsubmit="return validate()" autocomplete="off">
+            <div class="form__container">
+              <div class="form__field field">
+                <label for="elem-name" class="field__name body">Your Name</label>
+                <input class="field__input body" id="elem-name" type="text" placeholder="First and last name"
+                  required></input>
+              </div>
+              <div class="form__field field">
+                <label for="elem-email" class="field__name body">Your Email Address </label>
+                <input class="field__input body" id="elem-email" type="email" size="30" placeholder="Enter your email"
+                  required></input>
+              </div>
+              <div class="form__field field">
+                <label for="elem-subject" class="field__name body">Subject</label>
+                <input class="field__input body" id="elem-subject" type="text" placeholder="Enter the subject"
+                  required></input>
+              </div>
+              <div class="form__field field">
+                <label for="elem-message" class="field__name body">Message </label>
+                <textarea class="field__textarea body" id="elem-message" type="text" placeholder="Enter your message"
+                  required></textarea>
+              </div>
+            </div>
+            <button class="form__button btn-turq-hover flex" type="submit">
+              send message <div class="arrow-elem-trans"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="footer__upperbox flex">
+          <div class="footer__logos flex">
+            <a href="#"><img src="../../assets/logos/zoo.svg" alt="Zoo Logo"></a>
+            <a href="#"><img src="../../assets/logos/yem.svg" alt="Yem Digital"></a>
+            <a href="#"><img src="../../assets/logos/rss.svg" alt="RSSchool"></a>
+          </div>
+          <nav class="footer__nav flex">
+            <a href="#" class="navtext">About</a>
+            <a href="#" class="navtext">map</a>
+            <a href="#" class="navtext">zoos</a>
+            <a href="#" class="navtext">contact us</a>
+          </nav>
+          <button class="btn-inv-turq">Donate for volunteers <div class="arrow-elem-trans"></div> </button>
+        </div>
+        <hr class="footer__hr">
+        <div class="footer__lowerbox flex">
+          <div class="footer__copy flex">
+            <span class="body">&copy; 2021 DinaK </span>
+            <span class="body">&copy; Yem Digital</span>
+            <span class="body">&copy; RSSchool</span>
+          </div>
+          <hr class="footer__hr-mob">
+          <div class="footer__socials flex">
+            <a href="#" class="footer__socials-youtube"></a>
+            <a href="#" class="footer__socials-instagram"></a>
+            <a href="#" class="footer__socials-facebook"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="contact.js"></script>
+</body>
+
+</html>

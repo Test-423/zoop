@@ -1,0 +1,104 @@
+header {
+  background-color: getColor(orange, main);
+}
+.header {
+  background-color: getColor(orange, main);
+  @media screen and (max-width: 1600px) {
+    padding: 0 100px;
+  }
+  & > :nth-child(2) {
+    margin: 0 67px 0 auto;
+    @media screen and (max-width: 1400px){
+      margin: 0 80px 0 auto;
+    }
+  }
+  justify-content: space-between;
+  height: 110px;
+  &__logo {
+    width: 96px;
+    height: 50px;
+  }
+
+  &__link {
+  }
+
+  &__nav {
+    width: 556px;
+    &>a{
+      color: black;
+    }
+    &>:nth-child(4){
+      color: getColor(turt, main);
+    }
+    color: black;
+    box-sizing: border-box;
+    @media screen and (max-width: 1200px) {
+      width: calc(481px + (75) * ((100vw - 1200px) / 200));
+    }
+    justify-content: space-between;
+    @media screen and (max-width: 1150px) {
+      display: none;
+    }
+  }
+
+  &__socials {
+    width: 180px;
+
+    @media screen and (max-width: 1150px) {
+      display: none;
+    }
+    @media screen and (max-width: 1400px){
+      width: auto;
+    }
+    & > :nth-child(2) {
+      margin: 0 30px;
+      @media screen and (max-width: 1400px) {
+        margin: 0 30px;
+      }
+      @media screen and (max-width: 900px) {
+        margin: 0 50px;
+      }
+    }
+    & > a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 20px;
+    }
+    &-youtube {
+      background-image: url("../../../assets/icons/socials/youtube.svg");
+      background-color: getColor(youtube, main);
+      &:hover {
+        background-color: getColor(youtube, hover);
+      }
+    }
+    &-instagram {
+      background-image: url("../../../assets/icons/socials/insta.svg");
+      background-color: getColor(instagram, main);
+      &:hover {
+        background-color: getColor(instagram, hover);
+      }
+    }
+    &-facebook {
+      background-image: url("../../../assets/icons/socials/facebook.svg");
+      background-color: getColor(facebook, main);
+      &:hover {
+        background-color: getColor(facebook, hover);
+      }
+    }
+  }
+}
+.navtext {
+}
+.footer {
+  &__socials-youtube {
+  }
+
+  &__socials-instagram {
+  }
+
+  &__socials-facebook {
+  }
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');
+@import "../abstract/colors";
+* {
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+}
+.h1,
+.h1-320,
+.h2,
+.h2-320,
+.h3,
+.btext,
+.navtext {
+  text-transform: uppercase;
+}
+.h1 {
+  font-weight: 800;
+  font-size: 82px;
+  line-height: 100px;
+  &-320 {
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.01em;
+  }
+}
+.h2 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 66px;
+  &-320 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+.h3 {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 51px;
+}
+.sub {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 130%;
+}
+.body {
+  font-size: 18px;
+  line-height: 27px;
+  font-style: normal;
+  font-weight: 400;
+  //font-weight: 200;
+}
+.btext {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+.navtext {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  &:hover {
+    color: getColor(turt, main);
+  }
+  @media screen and (max-width: 440px) {
+    font-size: 14px;
+    letter-spacing: 1.7px;
+  }
+}

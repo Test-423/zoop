@@ -1,0 +1,30 @@
+$colors: (
+   black: hsl(0, 0%, 0%),
+   navy: hsl(260, 56%, 15%),
+   orange: (
+      main: hsl(27, 91%, 55%),
+      hover: hsl(27, 96%, 42%),
+   ),
+   turt: (
+      main: hsl(175, 100%, 31%),
+      hover: hsl(175, 92%, 25%),
+      lighter: hsl(175, 45%, 66%),
+   ),
+   white: hsl(0, 0%, 100%),
+   youtube: (
+      main: hsl(0, 100%, 50%),
+      hover: hsl(0, 98%, 68%),
+   ),
+   facebook: (
+      main: hsl(221, 44%, 41%),
+      hover: hsl(221, 55%, 60%),
+   ),
+   instagram: (
+      main: hsl(326, 57%, 48%),
+      hover: hsl(12, 57%, 48%),
+   ),
+);
+
+@function getColor($block, $target) {
+   @return map-get(map-get($colors, $block), $target);
+}

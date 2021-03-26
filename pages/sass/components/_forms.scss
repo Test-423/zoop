@@ -1,0 +1,113 @@
+@import "../abstract/colors";
+.form {
+  box-sizing: border-box;
+  width: 680px;
+  @media screen and (max-width: 1600px){
+    width: 740px;
+  }
+  @media screen and (max-width: 1050px){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__field {
+    width: 100%;
+    height: auto;
+    
+  }
+  &__container {
+    height: 618px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 460px){
+      height: 568px;
+    }
+  }
+  &__button {
+    margin-top: 67px;
+    @media screen and (max-width: 1600px){
+      margin-top: 50px;
+    }
+    @media screen and (max-width: 1400px){
+      width: 290px;
+    }
+    @media screen and (max-width: 1400px){
+      margin-top: 30px;
+      width: 100%;
+      height: 50px;
+    }
+  }
+}
+.field {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__name {
+    position: relative;
+    margin-left: 10px;
+    height: 27px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 460px){
+      margin-bottom: 5px;
+    }
+    &::before {
+      content: "*";
+      position: absolute;
+      color: aqua;
+      top: 0;
+      left: -10px;
+    }
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 0 0 0 20px;
+    @media screen and (max-width: 460px){
+      padding: 0 0 0 10px;
+    }
+  }
+  &__input:focus,
+  &__textarea:focus {
+    outline: none;
+    border: 1px solid getColor(turt, main);
+    box-shadow: 0px 4px 30px rgba(0, 160, 146, 0.3);
+  }
+  &__input {
+    height: 60px;
+    @media screen and (max-width: 460px){
+      height: 50px;
+    }
+  }
+
+  &__textarea {
+    padding-top: 20px;
+    height: 200px;
+    border-radius: 5px;
+  }
+  &-invalid {
+    position: relative;
+    & > :nth-child(2) {
+      background: rgba(245, 128, 33, 0.2);
+      border: 1px solid #f58021;
+      border-radius: 5px;
+    }
+    &::after {
+      position: absolute;
+      content: "Error message";
+      height: 27px;
+      width: 200px;
+      font-size: 18px;
+      line-height: 150%;
+      top: 97px;
+      color: #f58021;
+    }
+  }
+}

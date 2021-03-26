@@ -1,0 +1,158 @@
+@import "../base/fonts";
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+%btn {
+  @extend %flex;
+  @extend .btext;
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+}
+%arrow {
+  @extend %flex;
+  width: 64.86px;
+  height: 60px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24.28px 22px;
+}
+/* btn-orange-hover, btn-turq-hover, btn-inv-hover, btn-inv-navy, btn-inv-turq, btn-inv-orange, btn-turq-lighter */
+.btn {
+  &-orange-hover,
+  &-turq-hover,
+  &-inv-hover,
+  &-inv-navy,
+  &-inv-turq,
+  &-inv-orange,
+  &-turq-lighter {
+    @extend %btn;
+    transition: all 0.2s;
+    height: 74px;
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+  &-orange-hover {
+    background-color: getColor(orange, main);
+    width: 240px;
+    &:hover {
+      background-color: getColor(orange, hover);
+    }
+  }
+  &-turq-hover {
+    background-color: getColor(turt, main);
+    width: 359px;
+    &:hover {
+      background-color: getColor(turt, hover);
+    }
+  }
+  &-inv-hover {
+    border: 1px solid #ffffff;
+    background: transparent;
+    width: 320px;
+    justify-content: space-between;
+    & > span {
+      display: block;
+      margin: 0 auto;
+    }
+    & > .arrow-orange {
+      height: 100%;
+      width: 80px;
+    }
+    &:hover > .arrow-orange {
+      background-color: getColor(orange, hover);
+    }
+  }
+  &-inv-navy {
+    border: 1px solid map-get($colors, navy);
+    background: transparent;
+    width: 359px;
+    &:hover {
+      color: map-get($colors, white);
+      background-color: map-get($colors, navy);
+    }
+  }
+  &-inv-turq {
+    background: transparent;
+    width: 359px;
+    border: 1px solid #ffffff;
+    &:hover {
+      background-color: getColor(turt, main);
+    }
+  }
+  &-inv-orange {
+    background: transparent;
+    color: getColor(orange, main);
+    width: 142px;
+    &:hover {
+      color: map-get($colors, white);
+      background-color: getColor(orange, main);
+    }
+  }
+  &-turq-lighter {
+    background-color: getColor(turt, main);
+    width: 142px;
+    &:hover {
+      background-color: getColor(turt, lighter);
+    }
+  }
+}
+// arrow-navy, arrow-orange, arrow- white
+.arrow {
+  &-navy,
+  &-white,
+  &-orange {
+    @extend %arrow;
+    transition: all 0.3s;
+  }
+  &-elem-navy,
+  &-elem-orange,
+  &-elem-white,
+  &-elem-trans {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24.28px 22px;
+    width: 24.28px;
+    height: 22px;
+  }
+  &-navy,
+  &-elem-navy {
+    border-color: map-get($colors, navy);
+    background-image: url(../../../assets/icons/union/uni-n.svg);
+    &:hover {
+      background-color: map-get($colors, navy);
+      background-image: url(../../../assets/icons/union/uni-w.svg);
+    }
+  }
+  &-white,
+  &-elem-white {
+    border-color: map-get($colors, white);
+    background-image: url(../../../assets/icons/union/uni-w.svg);
+    &:hover {
+      background-color: map-get($colors, white);
+      background-image: url(../../../assets/icons/union/uni-n.svg);
+    }
+  }
+  &-elem-trans {
+    background-image: url(../../../assets/icons/union/uni-w.svg);
+    margin-left: 10px;
+  }
+  &-orange,
+  &-elem-orange {
+    border: none;
+    background-color: getColor(orange, main);
+    background-image: url(../../../assets/icons/union/uni-w.svg);
+    &:hover {
+      background-color: getColor(orange, hover);
+    }
+  }
+}

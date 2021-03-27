@@ -108,6 +108,9 @@
       line-height: 150%;
       top: 97px;
       color: #f58021;
+      @media screen and (max-width: 470px){
+        top: 85px;
+      }
     }
   }
 }

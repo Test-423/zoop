@@ -478,7 +478,7 @@ footer {
 }
 
 .footer__socials-youtube {
-  background-image: url("../../../assets/icons/socials/youtube.svg");
+  background-image: url("../../assets/icons/socials/youtube.svg");
   background-color: red;
 }
 
@@ -487,7 +487,7 @@ footer {
 }
 
 .footer__socials-instagram {
-  background-image: url("../../../assets/icons/socials/insta.svg");
+  background-image: url("../../assets/icons/socials/insta.svg");
   background-color: #c03584;
 }
 
@@ -496,7 +496,7 @@ footer {
 }
 
 .footer__socials-facebook {
-  background-image: url("../../../assets/icons/socials/facebook.svg");
+  background-image: url("../../assets/icons/socials/facebook.svg");
   background-color: #3b5897;
 }
 
@@ -813,6 +813,12 @@ header {
   color: #f58021;
 }
 
+@media screen and (max-width: 470px) {
+  .field-invalid::after {
+    top: 85px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -905,8 +911,10 @@ body {
   }
 }
 
-.maincontent__form {
-  width: 100%;
+@media screen and (max-width: 1050px) {
+  .maincontent__form {
+    width: 100%;
+  }
 }
 
 .maincontent__suptext {

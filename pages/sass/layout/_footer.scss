@@ -136,21 +136,21 @@ footer {
       border-radius: 20px;
     }
     &-youtube {
-      background-image: url("../../../assets/icons/socials/youtube.svg");
+      background-image: url("../../assets/icons/socials/youtube.svg");
       background-color: getColor(youtube, main);
       &:hover {
         background-color: getColor(youtube, hover);
       }
     }
     &-instagram {
-      background-image: url("../../../assets/icons/socials/insta.svg");
+      background-image: url("../../assets/icons/socials/insta.svg");
       background-color: getColor(instagram, main);
       &:hover {
         background-color: getColor(instagram, hover);
       }
     }
     &-facebook {
-      background-image: url("../../../assets/icons/socials/facebook.svg");
+      background-image: url("../../assets/icons/socials/facebook.svg");
       background-color: getColor(facebook, main);
       &:hover {
         background-color: getColor(facebook, hover);

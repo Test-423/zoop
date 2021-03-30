@@ -879,6 +879,12 @@ header {
   color: #f58021;
 }
 
+@media screen and (max-width: 460px) {
+  .field-invalid::after {
+    top: 82px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

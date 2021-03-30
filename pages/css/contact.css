@@ -542,8 +542,13 @@ header {
   background-color: #f58224;
 }
 
+.scrolling {
+  overflow: hidden;
+}
+
 .header {
   background-color: #f58224;
+  position: relative;
   justify-content: space-between;
   height: 110px;
 }
@@ -554,6 +559,12 @@ header {
   }
 }
 
+@media screen and (max-width: 1050px) {
+  .header {
+    padding: 0 47px 0 20px;
+  }
+}
+
 .header > :nth-child(2) {
   margin: 0 67px 0 auto;
 }
@@ -561,6 +572,12 @@ header {
 @media screen and (max-width: 1400px) {
   .header > :nth-child(2) {
     margin: 0 80px 0 auto;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .header > :nth-child(2) {
+    margin: 0 auto;
   }
 }
 
@@ -590,17 +607,41 @@ header {
   }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1050px) {
+  .header__nav {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 810px) {
   .header__nav {
     display: none;
   }
+}
+
+.header__nav--mobile {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  background-color: #1f113c;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  padding: 150px 0px 269px 0;
+}
+
+.header__nav--mobile > a {
+  line-height: 27px;
+  color: white;
 }
 
 .header__socials {
   width: 180px;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 700px) {
   .header__socials {
     display: none;
   }
@@ -609,6 +650,12 @@ header {
 @media screen and (max-width: 1400px) {
   .header__socials {
     width: auto;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .header__socials {
+    display: none;
   }
 }
 
@@ -624,7 +671,7 @@ header {
 
 @media screen and (max-width: 900px) {
   .header__socials > :nth-child(2) {
-    margin: 0 50px;
+    margin: 0 20px;
   }
 }
 
@@ -647,7 +694,7 @@ header {
 }
 
 .header__socials-instagram {
-  background-image: url("../../../assets/icons/socials/insta.svg");
+  background-image: url("../../assets/icons/socials/insta.svg");
   background-color: #c03584;
 }
 
@@ -656,12 +703,31 @@ header {
 }
 
 .header__socials-facebook {
-  background-image: url("../../../assets/icons/socials/facebook.svg");
+  background-image: url("../../assets/icons/socials/facebook.svg");
   background-color: #3b5897;
 }
 
 .header__socials-facebook:hover {
   background-color: #6184d1;
+}
+
+.header__menu {
+  display: none;
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  transition: none;
+  background-image: url("../../assets/icons/menu/hamburger.svg");
+}
+
+@media screen and (max-width: 810px) {
+  .header__menu {
+    display: block;
+  }
+}
+
+.header__menu--mobile {
+  background-image: url("../../assets/icons/menu/close-humburger.svg");
 }
 
 .form {
@@ -720,7 +786,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1000px) {
   .form__button {
     margin-top: 30px;
     width: 100%;
@@ -811,12 +877,6 @@ header {
   line-height: 150%;
   top: 97px;
   color: #f58021;
-}
-
-@media screen and (max-width: 470px) {
-  .field-invalid::after {
-    top: 85px;
-  }
 }
 
 * {

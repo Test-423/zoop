@@ -1,15 +1,25 @@
 header {
   background-color: getColor(orange, main);
 }
+.scrolling{
+  overflow: hidden;
+}
 .header {
   background-color: getColor(orange, main);
+  position: relative;
   @media screen and (max-width: 1600px) {
     padding: 0 100px;
   }
+  @media screen and (max-width: 1050px) {
+    padding: 0 47px 0 20px;
+  }
   & > :nth-child(2) {
     margin: 0 67px 0 auto;
-    @media screen and (max-width: 1400px){
+    @media screen and (max-width: 1400px) {
       margin: 0 80px 0 auto;
+    }
+    @media screen and (max-width: 1050px) {
+      margin: 0 auto;
     }
   }
   justify-content: space-between;
@@ -24,10 +34,10 @@ header {
 
   &__nav {
     width: 556px;
-    &>a{
+    & > a {
       color: black;
     }
-    &>:nth-child(4){
+    & > :nth-child(4) {
       color: getColor(turt, main);
     }
     color: black;
@@ -35,20 +45,41 @@ header {
     @media screen and (max-width: 1200px) {
       width: calc(481px + (75) * ((100vw - 1200px) / 200));
     }
+    @media screen and (max-width: 1050px) {
+      width: 450px;
+    }
     justify-content: space-between;
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 810px) {
       display: none;
     }
+    &--mobile {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      background-color: map-get($colors, navy);
+      width: 100vw;
+      height: 100vh;
+      z-index: 50;
+      padding: 150px 0px 269px 0;
+      & > a {
+        line-height: 27px;
+        color: white;
+      }
+    }
   }
-
   &__socials {
     width: 180px;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 700px) {
       display: none;
     }
-    @media screen and (max-width: 1400px){
+    @media screen and (max-width: 1400px) {
       width: auto;
+    }
+    @media screen and (max-width: 810px) {
+      display: none;
     }
     & > :nth-child(2) {
       margin: 0 30px;
@@ -56,7 +87,7 @@ header {
         margin: 0 30px;
       }
       @media screen and (max-width: 900px) {
-        margin: 0 50px;
+        margin: 0 20px;
       }
     }
     & > a {
@@ -75,18 +106,32 @@ header {
       }
     }
     &-instagram {
-      background-image: url("../../../assets/icons/socials/insta.svg");
+      background-image: url("../../assets/icons/socials/insta.svg");
       background-color: getColor(instagram, main);
       &:hover {
         background-color: getColor(instagram, hover);
       }
     }
     &-facebook {
-      background-image: url("../../../assets/icons/socials/facebook.svg");
+      background-image: url("../../assets/icons/socials/facebook.svg");
       background-color: getColor(facebook, main);
       &:hover {
         background-color: getColor(facebook, hover);
       }
+    }
+  }
+  &__menu {
+    display: none;
+    z-index: 100;
+    @media screen and (max-width: 810px) {
+      display: block;
+    }
+    width: 30px;
+    height: 30px;
+    transition: none;
+    background-image: url("../../assets/icons/menu/hamburger.svg");
+    &--mobile {
+      background-image: url("../../assets/icons/menu/close-humburger.svg");
     }
   }
 }
